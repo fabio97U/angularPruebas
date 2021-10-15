@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aprendiendoAngular';
+  title = 'aprendiendoAngular...';
+  public mostrarPeliculas: boolean;
+  constructor() {
+    this.mostrarPeliculas = true;
+  }
+
+  ocultarPelicula(): void {
+    this.mostrarPeliculas = false;
+  }
 }
