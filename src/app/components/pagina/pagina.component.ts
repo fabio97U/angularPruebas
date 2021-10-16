@@ -20,4 +20,8 @@ export class PaginaComponent implements OnInit {
     });
   }
 
+  redireccionar(): void {
+    this._router.navigate(["/pagina-de-pruebas", "Fabio"]);
+  }
+
 }

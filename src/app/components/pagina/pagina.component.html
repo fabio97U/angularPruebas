@@ -2,3 +2,13 @@
     <p>pagina works!</p>
     <h2>El nombre es: {{nombre}}</h2>
 </div>
+<button (click)="redireccionar()">REDIRIGIR</button>
+
+
+<div *ngIf="nombre; else plantillaElse">
+    <p>pagina works!</p>
+    <h2>El nombre es: {{nombre}}</h2>
+</div>
+<ng-template #plantillaElse>
+    <p>PLANTILLA ELSE</p>
+</ng-template>

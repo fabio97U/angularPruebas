@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'aprendiendoAngular...';
   public mostrarPeliculas: boolean;
+  public homeText: string;
   constructor() {
     this.mostrarPeliculas = true;
+    this.homeText = "Hola desde componente padre";
   }
 
   ocultarPelicula(): void {
