@@ -8,7 +8,7 @@
     <p>Hay muchas peliculas</p>
 </div>
 
-<div id="articles" *ngIf="peliculas">
+<!-- <div id="articles" *ngIf="peliculas">
     <article class="article-item" *ngFor="let p of peliculas; let i = index;">
         <div class="image-wrap">
             <img src="{{p.image}}" alt="{{p.titulo}}" />
@@ -34,4 +34,16 @@
 
         <div class="clearfix"></div>
     </article>
+</div> -->
+<div id="articles" *ngIf="peliculaFavorita.titulo != ''">
+    <p>Pelicula favorita</p>
+    <div>
+        <app-mpelicula [p]="peliculaFavorita"></app-mpelicula>
+    </div>
+</div>
+
+<div id="articles" *ngIf="peliculas">
+    <div *ngFor="let p of peliculas">
+        <app-mpelicula [p]="p" (MarcarFavorita)="mostrarFavorita($event)"></app-mpelicula>
+    </div>
 </div>

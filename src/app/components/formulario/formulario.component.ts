@@ -7,9 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  public user: any;
+  public campo: string = "";
+  public campo2: string = "";
+
+  constructor() {
+    this.user = {
+      nombres: '',
+      apellidos: '',
+      bio: '',
+      genero: ''
+    }
+  }
 
   ngOnInit(): void {
   }
 
+  onSumbit(): void {
+    console.log(this.user);
+  }
+
+  darClic(): void {
+    alert("CLIC");
+  }
+
+  hasSalido(): void {
+    alert("HAZ SALIDO");
+  }
+
+  presionoTecla(): void {
+    alert("presionoTecla(): void {");
+  }
 }

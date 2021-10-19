@@ -1,0 +1,26 @@
+<article class="article-item">
+    <div class="image-wrap">
+        <img src="{{p.image}}" alt="{{p.titulo}}" />
+    </div>
+
+    <h2>{{p.titulo | lowercase}}</h2>
+    <span class="date">
+        Hace 5 minutos
+    </span>
+    <a href="#">Leer más</a>
+
+    <span class="year" [style.background]="p.anio >= 2012? 'green': 'red'">
+        {{p.anio | espar}}
+    </span>
+
+    <span class="year" [class.year-green]="p.anio >= 2012" [class.year-red]="p.anio < 2012">
+        {{p.anio}}
+    </span>
+
+    <span class="year" [ngClass]="{'year-green': 'p.anio >= 2012', 'year-red': 'p.anio < 2012'}">
+        {{p.anio}}
+    </span>
+
+    <div class="clearfix"></div>
+    <button (click)="seleccionar($event, p)">Seleccionar como favorita</button>
+</article>
